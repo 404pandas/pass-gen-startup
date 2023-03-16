@@ -4,206 +4,279 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--Let browser know website is optimized for mobile-->
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!--Import materialize.css-->
-
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <!--Import Google Icon Font-->
-
+    <!-- Import Normalize stylesheet -->
+    <link rel="stylesheet" href="./assets/css/normalize.css" />
+    <!--Import Materialize stylesheets-->
+    <!-- Material Icons -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <!-- Minimized Materialize for production -->
     <link
       type="text/css"
       rel="stylesheet"
       href="./assets/css/materialize.min.css"
       media="screen,projection"
     />
+    <!-- Full Materialize for development -->
     <link
       type="text/css"
       rel="stylesheet"
       href="./assets/css/materialize.css"
       media="screen,projection"
     />
-
+    <!-- Import Animista stylesheet -->
+    <link rel="stylesheet" href="./assets/css/animista.css" />
+    <!-- Import personal stylesheets -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <!-- Import color stylesheet -->
+    <link rel="stylesheet" href="./assets/css/colors.css" />
     <title>Password Gen Startup</title>
   </head>
   <!-- Start of Body -->
   <body>
+    <!-- Start of Main -->
     <main>
-      <!-- Start of Main -->
       <!-- Start of Header/Nav -->
-      <nav class="light-blue lighten-1" role="navigation">
-        <div class="nav-wrapper container">
-          <a
-            id="logo-container"
-            href="https://github.com/404pandas"
-            class="brand-logo"
-            >Logo Placeholder</a
-          >
-          <ul class="right hide-on-med-and-down">
-            <li><a href="#card1">Declaring Variables</a></li>
-          </ul>
-
-          <ul id="nav-mobile" class="sidenav">
-            <li><a href="#">Navbar Link</a></li>
-          </ul>
-          <a href="#" data-target="nav-mobile" class="sidenav-trigger"
-            ><i class="material-icons">menu</i></a
-          >
-        </div>
-      </nav>
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="#card1" class="sidenav-close">Declaring Variables</a></li>
+        <li><a href="#card2" class="sidenav-close">DOM Manipulation</a></li>
+        <li><a href="#card3" class="sidenav-close">Web API</a></li>
+        <li><a href="#card4" class="sidenav-close">Third Party API</a></li>
+        <li><a href="#card5" class="sidenav-close">JQuery</a></li>
+        <li><a href="#card6" class="sidenav-close">Scope</a></li>
+      </ul>
+      <div class="navbar-fixed">
+        <!-- Navbar Color -->
+        <nav id="nav" class="light-green-bg">
+          <!-- Navbar Spacing -->
+          <div class="nav-wrapper flexbox flexSpaceBetween">
+            <!-- Logo -->
+            <img
+              id="codedLogo margin1"
+              href="https://github.com/404pandas"
+              class="marginAuto codedLogo margin1"
+              src="./assets/images/coded logo copy.png"
+            />
+            <!-- Navbar title -->
+            <span class="card-title">JS Study Site</span>
+            <!-- Dropdown Trigger -->
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+              ><i class="material-icons icon-block">menu</i></a
+            >
+            <ul class="hide-on-med-and-down">
+              <li>
+                <a href="#card1" class="sidenav-close">Declaring Variables</a>
+              </li>
+              <li>
+                <a href="#card2" class="sidenav-close">DOM Manipulation</a>
+              </li>
+              <li><a href="#card3" class="sidenav-close">Web API</a></li>
+              <li>
+                <a href="#card4" class="sidenav-close">Third Party API</a>
+              </li>
+              <li><a href="#card5" class="sidenav-close">JQuery</a></li>
+              <li><a href="#card6" class="sidenav-close">Scope</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
       <!-- End of Header/Nav -->
-      <!-- Start of Card 1 -->
-      <div id="card1" class="row">
-        <div class="col s12">
-          <div class="card white">
-            <div class="card-content black-text">
-              <span class="card-title">Declaring Variables</span>
-              <h2>What Do I google?</h2>
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#array_literal_notation"
-                title="How to declare a variable in Javascript"
-              >
-                <img
-                  src="./assets/images/arrayDeclaration.gif"
-                  alt="GIF of searching 'How to declare a variable in Javascript'"
-              /></a>
-              <p>"How to declare a variable in Javascript"</p>
-            </div>
-            <!-- End of Simplified Card -->
-            <!-- Start of Arrow Action -->
-            <div class="card-action">
-              <a
-                href="https://codepen.io/404pandas/pen/abaLdBo"
-                class="black-text"
-                >Click for Completed Codepen</a
-              >
-              <div class="container" style="width: 90%">
+      <!-- Start of card container -->
+      <div class="cards flexbox flexRow flexSpaceAround">
+        <!-- Start of Card 1 -->
+        <div id="card1" class="row margin1 cardWidth">
+          <!-- Card sizing -->
+          <div class="col s12 m6 contentWidth">
+            <!-- Card -->
+            <div class="card white flexbox flexColumn">
+              <!-- Card content -->
+              <div class="card-content black-text">
+                <span class="card-title">Declaring Variables</span>
+                <h2>What Do I Google?</h2>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Array#array_literal_notation"
+                  title="Javascript array variable declaration syntax"
+                >
+                  <img
+                    src="./assets/images/arrayDeclaration.gif"
+                    alt="GIF of searching 'Javascript array variable declaration syntax'"
+                    style="max-height: 100%; max-width: 100%"
+                /></a>
+                <h3>"Javascript array variable declaration syntax"</h3>
                 <p>
-                  <a
-                    class="waves-effect waves-light btn"
-                    id="copyButton"
-                    onclick="copyText()"
-                    >Copy code
-                    <i class="material-icons right">content_copy</i></a
-                  >
-                  <span
-                    class="copyMessage"
-                    style="
-                      margin-left: 10px;
-                      font-size: 14px;
-                      transition: all 0.2s ease-in;
-                      opacity: 0;
-                    "
-                    >Copied and ready to paste!</span
-                  >
+                  &emsp;&emsp;Syntax is a set of rules that define what the
+                  various combinations of symbols mean. This tells the computer
+                  how to read the code.
                 </p>
-                <pre><code class="language-markup" id="copiedText">
-                    // Declaring the Variable \\
- 
-                    
-                    // Calling the Array \\
-                    // Console.log to see the change!
-
-                    
-                    // length() Method \\
-                    // Console.log to see the change!
-
-                    
-                    // indexOf() Method \\
-                    // Reminder! Arrays start at 0! \\
-                    
-                    
-                    // reverse() Method \\
-                    // Console.log to see the change!
-
-
-                    // sort() Method \\
-                    // Console.log to see the change!
-                   
-
-                    // Coding Interview Practice! \\
-                    // How do we check if a string is a Palindrome?
-                    
-                    // For reference- Palindromes are words that
-                    // are spelled the same forwards and backwards!
-                    
-                    // Example phrase: "Oozy rat in a sanitary zoo"
-                    
-                    // STEP 1 \\
-                    // Create a variable with the phrase!
-                    // Then, console.log to see the change!
-                    
-                    
-                    // STEP 2 \\
-                    // Convert the string into all lowerCase or upperCase letters!
-                    // Then, console.log to see the change!
-
-                    
-                    // STEP 3 \\
-                    // Replace all spaces with an empty string
-                    // *** Advanced Deep Dive: Regex ***
-                    // * We will be covering what Regex is and how to write it
-                    // * at a later module. For this example, here's the TLDR:
-                    // * '\s' is the Regex for "whitespace"
-                    // * '/g' is the "global" flag, applying it to the whole string
-                    // What this method is saying in Human:
-                    // "Find all the spaces globally and replace them with an empty string"
-                    // Then, console.log to see the change!
-           
-                    
-                    // -- For a more readable code, reassign the variable to a new name
-                    var forwardPhrase = spacesReplaced;
-                    
-                    // STEP 4 \\
-                    // Reverse the string
-                    // Then, console.log to see the change!
-         
-                    
-                    // STEP 5 \\
-                    // Time to get extra \\
-                    // Use if/else logic to make the comparison Human readable
-                    // Then, console.log to see the change!
+              </div>
+              <!-- End of Simplified Card -->
+              <!-- Start of Button Container Div -->
+              <div class="flexbox flexRow flexSpaceAround">
+                <!-- Activity Pseudocode Modal Button -->
+                <a
+                  data-target="modal1"
+                  class="waves-effect waves-light btn modal-trigger btn-custom dark-orange-bg"
+                >
+                  <span class="hide-on-med-and-down">Answers</span>
+                  <i class="material-icons left no-margin">code</i>
+                </a>
+                <!-- Start of Pseudocode Modal -->
+                <div id="modal1" class="modal">
+                  <div class="modal-content">
+                    <h4>Pseudocode for Activity</h4>
+                    <!-- Codepen Button -->
+                    <a
+                      class="waves-effect waves-light btn blink-2 btn-custom light-orange-bg"
+                      id="codepenButton"
+                      href="https://codepen.io/404pandas/pen/abaLdBo"
+                      ><span>Answers</span>
+                      <i class="material-icons left no-margin">check</i></a
+                    >
+                    <!-- Copy Button -->
+                    <a
+                      class="waves-effect waves-light btn blink-2 btn-custom dark-orange-bg"
+                      id="copyButton"
+                      onclick="copyText()"
+                      ><span>Copy code</span>
+                      <i class="material-icons left no-margin"
+                        >content_copy</i
+                      ></a
+                    >
+                    <pre><code class="language-markup" id="copiedText">
                 
-        
-                    // Question: What does each variable look like after we've made all these
-                    // crazy changes? Uncomment the following lines of code to check!
-                    // console.log(phrase);
-                    // console.log(toLowerCasePhrase);
-                    // console.log(spacesReplaced);
-                    // console.log(forwardPhrase);
-                    // console.log(backwardPhrase);
-                    
-                    // Now we can utilize each variable from our JS
-                    // magic anywhere in our code! How neat is that?!
-                    
-                    // You can see where Javascript comes in handy when you use larger sets of data,
-                    // like a longer Palindrome! Replace the phrase in line 50 with a bigger one.
-                    // Example: This is a VERY large Palindrome that will not make sense when we reverse 
-                    // it but it is just for an example
-                    
-                </code></pre>
-                <p>
+  // Declaring the Variable \\
+
+
+  // Calling the Array \\
+  // Console.log to see the change!
+
+
+  // length() Method \\
+  // Console.log to see the change!
+
+
+  // indexOf() Method \\
+  // Reminder! Arrays start at 0! \\
+
+
+  // reverse() Method \\
+  // Console.log to see the change!
+
+
+  // sort() Method \\
+  // Console.log to see the change!
+
+
+  // Coding Interview Practice! \\
+  // How do we check if a string is a Palindrome?
+
+  // For reference- Palindromes are words that
+  // are spelled the same forwards and backwards!
+
+  // Example phrase: "Oozy rat in a sanitary zoo"
+
+  // STEP 1 \\
+  // Create a variable with the phrase!
+  // Then, console.log to see the change!
+
+
+  // STEP 2 \\
+  // Convert the string into all lowerCase or upperCase letters!
+  // Then, console.log to see the change!
+
+
+  // STEP 3 \\
+  // Replace all spaces with an empty string
+  // *** Advanced Deep Dive: Regex ***
+  // * We will be covering what Regex is and how to write it
+  // * at a later module. For this example, here's the TLDR:
+  // * '\s' is the Regex for "whitespace"
+  // * '/g' is the "global" flag, applying it to the whole string
+  // What this method is saying in Human:
+  // "Find all the spaces globally and replace them with an empty string"
+  // Then, console.log to see the change!
+
+
+  // -- For a more readable code, reassign the variable to a new name
+  var forwardPhrase = spacesReplaced;
+
+  // STEP 4 \\
+  // Reverse the string
+  // Then, console.log to see the change!
+
+
+  // STEP 5 \\
+  // Time to get extra \\
+  // Use if/else logic to make the comparison Human readable
+  // Then, console.log to see the change!
+
+
+  // Question: What does each variable look like after we've made all these
+  // crazy changes? Uncomment the following lines of code to check!
+  // console.log(phrase);
+  // console.log(toLowerCasePhrase);
+  // console.log(spacesReplaced);
+  // console.log(forwardPhrase);
+  // console.log(backwardPhrase);
+
+  // Now we can utilize each variable from our JS
+  // magic anywhere in our code! How neat is that?!
+
+  // You can see where Javascript comes in handy when you use larger sets of data,
+  // like a longer Palindrome! Replace the phrase in line 50 with a bigger one.
+  // Example: This is a VERY large Palindrome that will not make sense when we reverse 
+  // it but it is just for an example
+                
+                                </code></pre>
+                  </div>
+                </div>
+                <!-- End of Pseudocode Modal -->
+
+                <!-- Codepen Button -->
+                <a
+                  class="waves-effect waves-light btn blink-2 btn-custom dark-orange-bg"
+                  id="codepenButton"
+                  href="https://codepen.io/404pandas/pen/abaLdBo"
+                  ><span class="hide-on-med-and-down">Answers</span>
+                  <i class="material-icons left no-margin">check</i></a
+                >
+                <!-- Traversy Media Resource Button -->
+                <a
+                  class="waves-effect waves-light btn blink-2 btn-custom dark-orange-bg"
+                  id="resourceButton"
+                  href="https://www.youtube.com/watch?v=hdI2bqOjy3c"
+                  ><span class="hide-on-med-and-down">Resource</span>
+                  <i class="material-icons left no-margin">videocam</i></a
+                >
+
+                <!-- End of Button Container Div -->
+              </div>
+              <!-- Start of last part of card -->
+              <div class="flexbox flexColumn marginAuto">
+                <p>&emsp;The first button is the pseudocode.</p>
+                <p>&emsp;The second button is the answers.</p>
+                <p>&emsp;The third button is an extra resource.</p>
+                <h3>
                   Deep Dive- Click on the following to see the MDN docs on the
                   below methods!
-                </p>
+                </h3>
                 <ul>
-                  <li>
+                  <li class="marginLeft5">
                     <a
                       href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse"
                       >reverse() Method</a
                     >
                   </li>
-                  <li>
+                  <li class="marginLeft5">
                     <a
                       href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice"
                       >splice() Method</a
                     >
                   </li>
-                  <li>
+                  <li class="marginLeft5">
                     <a
                       href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort"
                       >sort() Method</a
@@ -213,38 +286,233 @@
                 <a href="https://geekflare.com/popular-javascript-functions/"
                   >Here is a link to some other common JS Methods!</a
                 >
-                <h3>How can this be used in your challenge?</h3>
-                <pre><code class="language-markup">
-function writeQuote() {
+                <h3>How can the following be used in your challenge?</h3>
+                <pre><code class="language-markup">function writeQuote() {
   var quote = generateQuote();
   var quoteText = document.querySelector('#quote');
-
   quoteText.value = quote;
 }</code></pre>
-                <h4>
+                <h3>
                   How do you call the writeQuote function in your Javascript?
-                </h4>
+                </h3>
               </div>
             </div>
           </div>
+          <!-- End of bottom part of card -->
         </div>
+        <!-- End of Card 1 -->
+        <!-- FUTURE DEVELOPMENT -->
+        <!-- Start of Card 2 -->
+        <div id="card2" class="row cardWidth margin1">
+          <!-- Card sizing -->
+          <div class="col s12 m6 contentWidth">
+            <!-- Card -->
+            <div class="card white flexbox flexColumn">
+              <!-- Card content -->
+              <div class="card-content black-text">
+                <span class="card-title">DOM Manipulation</span>
+                <h2>What Do I Google?</h2>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents"
+                  title="DOM manipulation Javascript"
+                >
+                  <img
+                    src="./assets/images/arrayDeclaration.gif"
+                    alt="GIF of searching 'DOM manipulation Javascript'"
+                    style="max-height: 100%; max-width: 100%"
+                /></a>
+                <h3>"DOM manipulation Javascript"</h3>
+                <p>
+                  &emsp;&emsp; Document Object Model (DOM) connects web pages to
+                  scripts or programming languages by representing the structure
+                  of a document. The DOM represents a document with a logical
+                  tree. Each branch of the tree ends in a node, and each node
+                  contains objects. DOM methods allow programmatic access to the
+                  tree. With them, you can change the document's structure,
+                  style, or content.
+                </p>
+              </div>
+              <!-- End of Simplified Card -->
+              <!-- Start of Button Container Div -->
+              <div class="flexbox flexRow flexSpaceAround">
+                <!-- Activity Pseudocode Modal Button -->
+                <a
+                  data-target="modal2"
+                  class="waves-effect waves-light btn modal-trigger btn-custom dark-orange-bg"
+                >
+                  <span class="hide-on-med-and-down">Answers</span>
+                  <i class="material-icons left no-margin">code</i>
+                </a>
+                <!-- Start of Pseudocode Modal -->
+                <div id="modal2" class="modal">
+                  <div class="modal-content">
+                    <h4>Pseudocode for Activity</h4>
+                    <!-- Codepen Button -->
+                    <a
+                      class="waves-effect waves-light btn blink-2 btn-custom light-orange-bg"
+                      id="codepenButton"
+                      href="https://404pandas.github.io/dom-manipulation/"
+                      ><span>Live Site</span>
+                      <i class="material-icons left no-margin">check</i></a
+                    >
+                    <!-- Copy Button -->
+                    <a
+                      class="waves-effect waves-light btn blink-2 btn-custom dark-orange-bg"
+                      id="copyButton"
+                      onclick="copyText2()"
+                      ><span>Copy code</span>
+                      <i class="material-icons left no-margin"
+                        >content_copy</i
+                      ></a
+                    >
+
+                    <pre><code class="language-markup" id="copiedText2">
+     // DOM Manipulation \\
+  
+  
+    // createElement() Method \\
+    // Console.log to see the change!
+  
+  
+    // appendChild() Method \\
+    // Console.log to see the change!
+  
+  
+    // setAttribute Method \\
+    // Reminder! Arrays start at 0! \\
+  
+  
+    // Coding Interview Practice! \\
+    // How do we check if a string is a Palindrome?
+  
+    // For reference- Palindromes are words that
+    // are spelled the same forwards and backwards!
+  
+    // Example phrase: "Oozy rat in a sanitary zoo"
+  
+    // STEP 1 \\
+    // Create a variable with the phrase!
+    // Then, console.log to see the change!
+  
+  
+    // STEP 2 \\
+    // Convert the string into all lowerCase or upperCase letters!
+    // Then, console.log to see the change!
+  
+  
+    // STEP 3 \\
+    // Replace all spaces with an empty string
+  
+    // Question: 
+  
+    // Now we can utilize each variable from our JS
+    // magic anywhere in our code! How neat is that?!
+  
+    // You can see where Javascript comes in handy when you use larger sets of data,
+    // like a longer Palindrome! Replace the phrase in line 50 with a bigger one.
+    // Example: This is a VERY large Palindrome that will not make sense when we reverse 
+    // it but it is just for an example
+                                  </code></pre>
+                  </div>
+                </div>
+                <!-- End of Pseudocode Modal -->
+
+                <!-- Codepen Button -->
+                <a
+                  class="waves-effect waves-light btn blink-2 btn-custom dark-orange-bg"
+                  id="codepenButton"
+                  href="https://codepen.io/404pandas/pen/abaLdBo"
+                  ><span class="hide-on-med-and-down">Answers</span>
+                  <i class="material-icons left no-margin">check</i></a
+                >
+                <!-- Traversy Media Resource Button -->
+                <a
+                  class="waves-effect waves-light btn blink-2 btn-custom dark-orange-bg"
+                  id="resourceButton"
+                  href="https://www.youtube.com/watch?v=0ik6X4DJKCc"
+                  ><span class="hide-on-med-and-down">Resource</span>
+                  <i class="material-icons left no-margin">videocam</i></a
+                >
+
+                <!-- End of Button Container Div -->
+              </div>
+              <!-- Start of last part of card -->
+              <div class="flexbox flexColumn marginAuto">
+                <p>&emsp;The first button is the repo to the pseudocode.</p>
+                <p>&emsp;The second button is the branch with the answers.</p>
+                <p>&emsp;The third button is an extra resource.</p>
+                <h3>
+                  Deep Dive- Click on the following to see the MDN docs on the
+                  below methods!
+                </h3>
+                <ul>
+                  <li class="marginLeft5">
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"
+                      >querySelector() Method</a
+                    >
+                  </li>
+                  <li class="marginLeft5">
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createElement"
+                      >createElement() Method</a
+                    >
+                  </li>
+                  <li class="marginLeft5">
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute"
+                      >setAttribute() Method</a
+                    >
+                  </li>
+                  <li class="marginLeft5">
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener"
+                      >addEventListener() Method</a
+                    >
+                  </li>
+                  <li class="marginLeft5">
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild"
+                      >appendChild() Method</a
+                    >
+                  </li>
+                  <li class="marginLeft5">
+                    <a
+                      href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach"
+                      >forEach() Method</a
+                    >
+                  </li>
+                </ul>
+                <a href="https://geekflare.com/popular-javascript-functions/"
+                  >Here is a link to some other common JS Methods!</a
+                >
+                <h3>How can the following be used in your challenge?</h3>
+                <pre><code class="language-markup">function writeQuote() {
+    var quote = generateQuote();
+    var quoteText = document.querySelector('#quote');
+    quoteText.value = quote;
+  }</code></pre>
+                <h3>
+                  How do you call the writeQuote function in your Javascript?
+                </h3>
+              </div>
+            </div>
+          </div>
+          <!-- End of bottom part of card -->
+        </div>
+        <!-- End of Card 2 -->
+        <!-- Start of Card 3 -->
+        <!-- <div id="card3" class="row">
+      </div> -->
+        <!-- End of Card 3 -->
+        <!-- Start of Card 4 -->
+        <!-- <div id="card4" class="row">
+      </div> -->
+        <!-- End of Card 4 -->
+        <!-- End of Card container -->
       </div>
-      <!-- End of Card 1 -->
-      <!-- FUTURE DEVELOPMENT -->
-      <!-- Start of Card 2 -->
-      <!-- <div id="card2" class="row">
-      </div> -->
-      <!-- End of Card 2 -->
-      <!-- Start of Card 3 -->
-      <!-- <div id="card3" class="row">
-      </div> -->
-      <!-- End of Card 3 -->
-      <!-- Start of Card 4 -->
-      <!-- <div id="card4" class="row">
-      </div> -->
-      <!-- End of Card 4 -->
       <!-- beginning of footer -->
-      <footer class="page-footer orange">
+      <footer class="page-footer light-green-bg">
         <div class="container">
           <div class="row">
             <div class="col l6 s12">
@@ -294,11 +562,11 @@ function writeQuote() {
             </div>
           </div>
         </div>
-        <div class="footer-copyright">
+        <div class="footer-copyright dark-green-bg">
           <div class="container">
             Made by
             <a
-              class="orange-text text-lighten-3"
+              class="dark-green-fg text-lighten-3 light-green-bg"
               href="https://www.linkedin.com/in/404pandas/"
               >Mary Elenius</a
             >
@@ -313,6 +581,7 @@ function writeQuote() {
       <script src="./assets/js/init.js"></script>
       <script src="./assets/js/materialize.js"></script>
       <script src="./assets/js/materialize.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <!-- End of Main -->
     </main>
     <!-- End of Body -->
